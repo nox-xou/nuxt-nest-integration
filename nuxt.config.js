@@ -13,7 +13,7 @@ const config = async () => ({
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'game-frontend',
+    title: 'application',
     htmlAttrs: {
       lang: 'en'
     },
