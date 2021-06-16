@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "nuxt",
+    "dev:server": "nest start --debug --watch",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
