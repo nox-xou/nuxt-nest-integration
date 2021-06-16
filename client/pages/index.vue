@@ -37,7 +37,7 @@ export default class Index extends Vue {
   async asyncData({ $axios }: Context) {
     let hello;
     try {
-      hello = await $axios.$post('/api');
+      hello = await $axios.$get('/api');
     } catch (e) {
       console.error(e.message);
     }

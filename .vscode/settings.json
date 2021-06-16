@@ -10,5 +10,6 @@
   "[vue]": {
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "js/ts.implicitProjectConfig.experimentalDecorators": true
 }

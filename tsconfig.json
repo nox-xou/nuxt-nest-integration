@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "ES2018",
+    "target": "ES2019",
     "module": "ESNext",
     "moduleResolution": "Node",
     "lib": [
@@ -26,6 +26,7 @@
     "types": [
       "@nuxt/types",
       "@nuxtjs/axios",
+      "@nuxtjs/proxy",
       "@types/node",
       "@types/jest",
       "@types/supertest"
