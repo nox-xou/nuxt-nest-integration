@@ -1,9 +1,9 @@
 <template>
   <div class="container">
     <div>
-      <div>{{ hello }}</div>
+      <div></div>
       <Logo />
-      <h1 class="title">game-frontend</h1>
+      <h1 class="title">{{ hello }}</h1>
       <div class="links">
         <a
           href="https://nuxtjs.org/"
@@ -34,14 +34,12 @@ import { Component, Vue } from 'nuxt-property-decorator';
   name: 'Index'
 })
 export default class Index extends Vue {
-  private hello!: string;
-
   async asyncData({ $axios }: Context) {
     let hello;
     try {
-      hello = await $axios.$get('/');
+      hello = await $axios.$post('/api');
     } catch (e) {
-      console.error(e);
+      console.error(e.message);
     }
 
     return {
