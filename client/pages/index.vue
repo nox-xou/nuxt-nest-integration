@@ -1,8 +1,9 @@
 <template>
   <div class="container">
     <div>
+      <div></div>
       <Logo />
-      <h1 class="title">game-frontend</h1>
+      <h1 class="title">{{ hello }}</h1>
       <div class="links">
         <a
           href="https://nuxtjs.org/"
@@ -26,9 +27,26 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import { Context } from '@nuxt/types';
+import { Component, Vue } from 'nuxt-property-decorator';
 
-export default Vue.extend({})
+@Component({
+  name: 'Index'
+})
+export default class Index extends Vue {
+  async asyncData({ $axios }: Context) {
+    let hello;
+    try {
+      hello = await $axios.$get('/api');
+    } catch (e) {
+      console.error(e.message);
+    }
+
+    return {
+      hello
+    };
+  }
+}
 </script>
 
 <style>
