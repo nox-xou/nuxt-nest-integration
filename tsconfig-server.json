@@ -11,5 +11,11 @@
     "outDir": "./.nest",
     "baseUrl": "./",
     "incremental": true
-  }
+  },
+  "exclude": [
+    "node_modules",
+    ".nuxt",
+    ".nest",
+    "client"
+  ]
 }
